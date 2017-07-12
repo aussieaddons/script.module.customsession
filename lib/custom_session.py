@@ -65,6 +65,6 @@ class Session(requests.Session):
         except requests.exceptions.HTTPError as e:
             raise e
         except Exception as e:
-            raise AFLVideoException('Error: {0}'.format(e))
+            raise NonFatalException('Error: {0}'.format(e))
 
         return req
